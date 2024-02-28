@@ -137,7 +137,7 @@ class RegexTokenizer(Tokenizer):
             special = {}
             assert all(token not in text for token in self.special_tokens)
         elif isinstance(allowed_special, set):
-            speical = {k:v for k, v in self.special_tokens.items() if k in allowed_special}
+            special = {k:v for k, v in self.special_tokens.items() if k in allowed_special}
         else:
             raise ValueError(f'allowed_special={allowed_special} not understood')
         if not special:
